@@ -11,10 +11,15 @@ import pixel.academy.setter_injection_app.common.Chef;
 public class DemoController {
 
     private Chef myChef;
+    private Chef secondChef;
 
     @Autowired
-    public DemoController(@Qualifier("turkishChef") Chef theChef) {
+    public DemoController(
+            @Qualifier("turkishChef") Chef theChef,
+            @Qualifier("frechChef") Chef theSecondChef) {
+        System.out.println("In Constructor:" + getClass().getSimpleName());
         myChef = theChef;
+        secondChef = theSecondChef;
     }
 
 
