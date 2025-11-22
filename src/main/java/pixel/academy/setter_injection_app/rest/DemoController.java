@@ -22,6 +22,11 @@ public class DemoController {
         secondChef = theSecondChef;
     }
 
+    @GetMapping("/check")
+    public String check() {
+        return "Comparing beans: myChef == secondChef, " + (myChef == secondChef);
+    }
+
 
 
     @GetMapping("/dailyrecipe")
