@@ -15,7 +15,7 @@ public class DemoController {
 
     @Autowired
     public DemoController(
-            @Qualifier("turkishChef") Chef theChef,
+            @Qualifier("frechChef") Chef theChef,
             @Qualifier("frechChef") Chef theSecondChef) {
         System.out.println("In Constructor:" + getClass().getSimpleName());
         myChef = theChef;
